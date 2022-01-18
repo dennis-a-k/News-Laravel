@@ -1,0 +1,77 @@
+* {
+    font-family: "Nunito", ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+        "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template: minmax(auto, auto) 1fr minmax(auto, auto) / 1fr;
+}
+
+.card-news {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+}
+
+.site-header {
+    background-color: rgba(0, 0, 0, 0.85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+    color: #8e8e8e;
+    transition: color 0.15s ease-in-out;
+}
+
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+/* Пагинация */
+.page-item:not(:first-child) .page-link-news {
+    margin-left: -1px;
+}
+
+.page-link-news {
+    padding: 0.1rem 0.7rem;
+    position: relative;
+    display: block;
+    color: rgba(0, 0, 0, 0.85);
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.page-link-news:hover {
+    color: #6c757d;
+}
+
+.page-item.active .page-link-news {
+    z-index: 3;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-color: rgba(0, 0, 0, 0.85);
+}
+
+.page-item.disabled .page-link-news {
+    color: #6c757d;
+    pointer-events: none;
+}
+/* Конец пагинации */

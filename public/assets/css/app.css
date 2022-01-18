@@ -1,0 +1,133 @@
+* {
+    font-family: "Nunito", ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+        "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template: minmax(auto, auto) 1fr minmax(auto, auto) / 1fr;
+    background: url(../img/news.jpeg) no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+@media (max-width: 1100px) {
+    body {
+        background: #fff;
+    }
+}
+
+.bg-red {
+    background-color: #900000;
+}
+
+.btn-news {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid #900000;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #900000;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-news:hover {
+    background-color: #610101;
+}
+
+.card-news {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #eee;
+}
+
+.color-red,
+.link-red {
+    color: #900000;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.9);
+    min-height: 100vh;
+}
+
+.dropdown-menu {
+    min-width: 7rem;
+    border-radius: 0rem;
+}
+
+.lang {
+    display: block;
+    cursor: pointer;
+}
+
+.link-red:hover {
+    color: #610101;
+}
+
+.modal-content {
+    border-radius: 0rem;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-radius: 0rem;
+    border-top: 1px solid #900000;
+    padding: 0rem;
+}
+.modal-footer p {
+    cursor: pointer;
+}
+
+/* Пагинация */
+.page-item:not(:first-child) .page-link-news {
+    margin-left: -1px;
+}
+
+.page-link-news {
+    padding: 0.1rem 0.7rem;
+    position: relative;
+    display: block;
+    color: #900000;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.page-link-news:hover {
+    color: #6c757d;
+}
+
+.page-item.active .page-link-news {
+    z-index: 3;
+    color: #fff;
+    background-color: #900000;
+    border-color: #900000;
+}
+
+.page-item.disabled .page-link-news {
+    color: #6c757d;
+    pointer-events: none;
+}
+/* Конец пагинации */
