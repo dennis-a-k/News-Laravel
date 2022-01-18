@@ -5,6 +5,7 @@
                 <h5 class="modal-title color-red" id="exampleModalToggleLabel">{{ __('validation.attributes.authorization') }}</h5>
             </div>
             <div class="modal-body">
+                <div class="text-center"><p>Для входа под учеткой Администратора введите<br>Email: admin@admin.ru, пароль: adminadmin</p></div>
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
 
